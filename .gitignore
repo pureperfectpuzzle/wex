@@ -1,0 +1,9 @@
+# ignore folders
+.vs/
+.git/
+bin/
+keys/
+obj/
+
+# ignore pdf files
+*.pdf

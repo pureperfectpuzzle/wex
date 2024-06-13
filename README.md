@@ -3,7 +3,7 @@
 ## Introduction
 We can use [Duende IdentityServer](https://duendesoftware.com/products/identityserver) to only allow authenticated users access our valuable web API service. This documents briefly talk about code files, how SOLID principles are applied in design and the steps to run the demo.
 
- **Note:**_This repository is to demo how to do this. Since it is not a product, this demo simplifies the implementation to show the minimum what we need to do_.
+ **Note:** _This repository is to demo how to do this. Since it is not a product, this demo simplifies the implementation to show the minimum what we need to do._
 
 ## Code Repository
 The demo contains two solutions: "WexIdServer" and "WexSolution". All projects are on .NET Core 6.0.
@@ -55,6 +55,8 @@ I add ```IProductRepository``` and its implementing class ```ProductRepository``
 ## How to Run the Demo?
 
 I have uploaded my code into [My github repository](https://github.com/pureperfectpuzzle/wex).
+
+**Note:** _when you run projects, please use "**run as administration**" to open Visual Studio 2022 and web browser. Otherwise, browser might report invalid certificate error and cannot continue._
 
 ### Clone Code Base to Local Repository
 - Create a folder on your machine.

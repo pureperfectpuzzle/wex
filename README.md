@@ -56,7 +56,7 @@ I add ```IProductRepository``` and its implementing class ```ProductRepository``
 
 I have uploaded my code into [My github repository](https://github.com/pureperfectpuzzle/wex).
 
-**Note:** _when you run projects, please use "**run as administration**" to open Visual Studio 2022 and web browser. Otherwise, browser might report invalid certificate error and cannot continue._
+**Note:** _when you run projects, please use "**run as administrator**" to open Visual Studio 2022 and web browser. Otherwise, browser might report invalid certificate error and cannot continue._
 
 ### Clone Code Base to Local Repository
 - Create a folder on your machine.

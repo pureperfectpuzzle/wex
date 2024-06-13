@@ -32,7 +32,7 @@ This file contains the implementation of all web api methods. All web api method
 #### ```Repository.cs```, ```ProductRepository.cs``` and repository interfaces
 These files implement a simple in-memory product repository. It supports **asynchronous** data operations.
 
-### ```Product.cs```
+#### ```Product.cs```
 This file contains product DTO (data transfer object). It is used in both web api methods as DTO and repository as data object. Again, this simplification is only for demo purpose. In reality, ORM has its own data object; data model is only used in api layer.
 
 ## SOLID Object Oriented Design Principles
@@ -54,13 +54,25 @@ I add ```IProductRepository``` and its implementing class ```ProductRepository``
 
 ## How to Run the Demo?
 
-### Clone Code Base to Local Repository
+I have uploaded my code into [My github repository](https://github.com/pureperfectpuzzle/wex).
 
+### Clone Code Base to Local Repository
+- Create a folder on your machine.
+- Use git cli to open the folder. 
+- Then run ```git clone https://github.com/pureperfectpuzzle/wex.git```.
 
 ### Open Both Solutions in Visual Studio 2022
-
+Use Visual Studio 2022 to open the two solutions and build both of them.
 
 ### Obtain JWT Token Using curl
-
+- Run ```IdServer``` project in the solution ```WexIdServer```.
+- Use curl to retrieve an access token. Or if you prefer GUI, you can also use Postman/ARC: ```curl "https://localhost:7220/connect/token" -X POST -d "client_id=api.client&scope=wexassessmentapi_scope&client_secret=5C35BA65-4E20-43B2-90D4-9E2EA7A56DE1&grant_type=client_credentials" -H "Content-Type: application/x-www-form-urlencoded" -H "Cache-Control: no-cache"```.
+- Copy the token from result for later use which is in the "access_token" json field.
+- Don't close the IdServer since it will be used by web API server too.
 
 ### Test Web API Methods
+- Run ```WexAssessmentApi``` project in the solution ```WexSolution```.
+- First try any web api method and verify it returns 401 error.
+- Click "Authorize" button on top right corner and paste the token just copied into the form. Then click "Authorize" button. Verify it is successful before clicking "Close" button.
+- Now you can play with all web api methods to do CRUD operations. You can verify actions in different situations, such as success, failure because of data model validation, and failure because of parameter is not provided, etc.
+- Click on "Authorize" button again and "Logout" button to close the current session. Then verify user cannot call any web api method again.
